@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="shakespeare">#0277ff</color>
+    <color name="mine_shaft">#212121</color>
+
+    <color name="san_juan_50">#F6F6F7</color>
+    <color name="san_juan_100">#ECEEEF</color>
+    <color name="san_juan_150">#E3E5E7</color>
+    <color name="san_juan_200">#DADDE0</color>
+    <color name="san_juan_200_alpha_0_5">#80DADDE0</color>
+    <color name="san_juan_300">#C7CBD0</color>
+    <color name="san_juan_400">#B5BAC0</color>
+    <color name="san_juan_500">#A2A9B0</color>
+    <color name="san_juan_600">#8F98A1</color>
 </resources>
