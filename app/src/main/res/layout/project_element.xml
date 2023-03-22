@@ -24,4 +24,17 @@
         app:layout_constraintStart_toStartOf="@+id/project_name_tv"
         app:layout_constraintTop_toBottomOf="@+id/project_name_tv"
         tools:text="28 April 2022 - 30 Jan 2030" />
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="status"
+
+        android:padding="8dp"
+        app:layout_constraintCircleRadius="20dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="@+id/date_project_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/project_name_tv" />
 </androidx.constraintlayout.widget.ConstraintLayout>

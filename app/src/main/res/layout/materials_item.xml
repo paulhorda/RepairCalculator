@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/border_background"
+        android:columnCount="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:background="@drawable/border_background"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            tools:text="Material Item" />
+
+        <TextView
+            android:id="@+id/count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/border_background"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="12dp"
+
+            android:singleLine="true"
+
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            tools:text="Count" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/border_background"
+            android:fontFamily="@font/roboto_medium"
+
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            tools:text="Price" />
+
+        <TextView
+            android:id="@+id/full_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/border_background"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            tools:text="Full Price" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
