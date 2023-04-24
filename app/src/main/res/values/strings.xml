@@ -55,4 +55,12 @@
     <string name="add_item">Add item</string>
     <string name="count">Count</string>
     <string name="new_material">New material</string>
+    <string name="result">Result</string>
+    <string name="plan">Plan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="table">Table</string>
 </resources>

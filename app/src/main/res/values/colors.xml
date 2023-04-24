@@ -33,5 +33,6 @@
     <color name="not_started">#2196F3</color>
     <color name="shakespeare_light">#B9D9FF</color>
     <color name="shakespeare_dark">#002653</color>
+    <color name="success">#BAFFBB</color>
 
 </resources>

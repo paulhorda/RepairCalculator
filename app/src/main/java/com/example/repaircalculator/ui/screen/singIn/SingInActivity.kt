@@ -47,6 +47,7 @@ class SingInActivity : AppCompatActivity() {
                     editor?.apply()
 
                     startActivity(Intent(this@SingInActivity, MainActivity::class.java))
+                    setSupportActionBar(null)
                     finish()
                 } else {
                     Snackbar.make(

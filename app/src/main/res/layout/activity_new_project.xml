@@ -56,6 +56,30 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/image_mb"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:elevation="2dp"
+        android:letterSpacing="0.02"
+        android:text="@string/add_image"
+        android:textAllCaps="false"
+        android:textColor="@color/shakespeare"
+        android:textSize="16sp"
+        app:backgroundTint="@color/catskill_white"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/data_end_mb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/project_new_address_til"
+        app:strokeColor="@color/catskill_white" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/data_start_mb"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
@@ -76,7 +100,7 @@
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toStartOf="@id/data_end_mb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/project_new_address_til"
+        app:layout_constraintTop_toBottomOf="@id/image_mb"
         app:strokeColor="@color/catskill_white" />
 
     <com.google.android.material.button.MaterialButton
@@ -101,7 +125,7 @@
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/data_start_mb"
-        app:layout_constraintTop_toBottomOf="@id/project_new_address_til"
+        app:layout_constraintTop_toBottomOf="@id/image_mb"
         app:strokeColor="@color/catskill_white" />
 
     <com.google.android.material.button.MaterialButton
@@ -122,5 +146,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data_start_mb"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

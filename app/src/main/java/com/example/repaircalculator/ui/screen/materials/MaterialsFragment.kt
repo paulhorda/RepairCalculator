@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.repaircalculator.data.entity.Note
+import com.example.repaircalculator.data.entity.NoteType
 import com.example.repaircalculator.databinding.FragmentMaterialsBinding
 import com.example.repaircalculator.databinding.FragmentNotesBinding
 import com.example.repaircalculator.databinding.FragmentRoomsBinding
@@ -46,7 +47,8 @@ class MaterialsFragment : Fragment() {
         }
 
         binding.newNoteEfab.setOnClickListener{
-            viewModel.insertNote(Note(0, 0, "", 1, System.currentTimeMillis()))
+            viewModel.insertNote(Note(0, 0, "", NoteType.NOTE,1, System.currentTimeMillis()))
+            viewModel.insertNote(Note(0, 0, "", NoteType.TABLE,1, System.currentTimeMillis()))
             viewModel.setNotes(0)
         }
     }

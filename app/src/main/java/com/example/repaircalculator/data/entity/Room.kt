@@ -11,5 +11,6 @@ data class Room(
     val name: String,
     val height: Double,
     val square: Double,
-    @ColumnInfo(name = "created_at") val createdAt: Long
+    var image: String,
+    @ColumnInfo(name = "created_at") val createdAt: Long,
 )

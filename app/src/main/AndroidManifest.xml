@@ -11,34 +11,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RepairCalculator"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Material3.Light.NoActionBar"
+        tools:targetApi="33">
         <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/><activity
             android:name=".ui.screen.project.ProjectActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".ui.screen.newProject.NewProjectActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.screen.planPaint.MainActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".ui.screen.main.MainActivity"
-            android:exported="true">
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:exported="false">
         </activity>
 
         <activity
             android:name=".ui.screen.singIn.SingInActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,7 +44,11 @@
             </intent-filter>
         </activity>
 
+
     </application>
     <uses-permission android:name="android.permission.CAMERA">
     </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="com.android.providers.downloads.DownloadStorageProvider"/>
 </manifest>

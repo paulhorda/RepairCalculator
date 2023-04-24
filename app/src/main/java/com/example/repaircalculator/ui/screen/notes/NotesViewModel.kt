@@ -5,14 +5,20 @@ import androidx.lifecycle.viewModelScope
 import com.example.repaircalculator.adapter.NoteAdapter
 import com.example.repaircalculator.data.dao.NoteDao
 import com.example.repaircalculator.data.dao.NoteElementDao
+import com.example.repaircalculator.data.dao.ProjectDao
+import com.example.repaircalculator.data.dao.RoomDao
 import com.example.repaircalculator.data.entity.Note
+import com.example.repaircalculator.data.entity.Project
+import com.example.repaircalculator.data.entity.Room
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class NotesViewModel @Inject constructor(
+    private val roomDao: RoomDao,
     private val noteDao: NoteDao,
+    private val projectDao: ProjectDao,
     private val noteElementDao: NoteElementDao,
 ) : ViewModel() {
 
@@ -23,15 +29,34 @@ class NotesViewModel @Inject constructor(
 //    }
 //
 
-    fun insertNote(note: Note){
+    fun updateRoomImage(roomId: Int, image:String) {
+        viewModelScope.launch {
+            val room = roomDao.getRoom(roomId)
+            if(room!=null){
+                room.image = image
+                roomDao.updateRoom(room)
+            }
+        }
+    }
+
+    fun insertNote(note: Note) {
         viewModelScope.launch {
             noteDao.insertNote(note)
         }
     }
 
+    suspend fun getRoom(id: Int): Room? {
+        return roomDao.getRoom(id)
+    }
+
+    suspend fun getProject(id: Int): Project? {
+        return projectDao.getProjectById(id)
+    }
+
+
     fun setNotes(projectId: Int) {
         viewModelScope.launch {
-            adapter.notes = noteDao.getNotesOrNull(projectId)?: emptyList()
+            adapter.notes = noteDao.getNotesOrNull(projectId) ?: emptyList()
 //            noteDao.insertNote(Note(0, projectId, "Buy smth", 1, System.currentTimeMillis()))
 //            noteDao.insertNote(Note(0, projectId, "Buy materials", 1, System.currentTimeMillis()))
         }

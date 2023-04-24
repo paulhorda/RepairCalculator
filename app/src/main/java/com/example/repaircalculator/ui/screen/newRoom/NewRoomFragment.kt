@@ -1,5 +1,6 @@
 package com.example.repaircalculator.ui.screen.newRoom
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.repaircalculator.data.entity.Room
 import com.example.repaircalculator.databinding.FragmentNewRoomBinding
+import com.example.repaircalculator.ui.screen.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,22 +37,24 @@ class NewRoomFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.addNewRoomBtn.setOnClickListener {
-            viewModel.insertRoom(Room(0,
+            val room = Room(0,
                 args.projectId,
                 binding.roomNewNameTil.editText?.text.toString(),
                 binding.roomNewHeightTil.editText?.text.toString().toDouble(),
                 binding.roomNewSquareTil.editText?.text.toString().toDouble(),
+                "",
                 System.currentTimeMillis()
-            ))
+            )
+
+            viewModel.insertRoom(room)
             view.findNavController().popBackStack()
         }
-    }
 
-//    private fun setLayoutManager() {
-//        val dividerItemDecoration = DividerItemDecoration(requireContext(), LinearLayout.VERTICAL)
-//
-//        binding.notesListRv.adapter = viewModel.adapter
-////        binding.roomsRv.addItemDecoration(dividerItemDecoration)
-//    }
+        binding.addPlanBtn.setOnClickListener {
+            val intent = Intent(requireContext(), com.example.repaircalculator.ui.screen.planPaint.MainActivity::class.java)
+            intent.putExtra("id", 0)
+            startActivity(intent)
+        }
+    }
 
 }

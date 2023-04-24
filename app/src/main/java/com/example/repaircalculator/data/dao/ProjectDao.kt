@@ -13,7 +13,7 @@ interface ProjectDao {
     fun getProjects(userId:Int): Flow<List<Project>>
 
     @Query("SELECT * FROM Projects WHERE id=:projectId LIMIT 1")
-    fun getProjectById(projectId:Int): Project?
+    suspend fun getProjectById(projectId:Int): Project?
 
     @Insert
     suspend fun insertProject(project: Project)

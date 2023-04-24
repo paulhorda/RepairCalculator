@@ -1,5 +1,6 @@
 package com.example.repaircalculator.viewHolder
 
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.repaircalculator.data.entity.Material
 import com.example.repaircalculator.data.entity.Note
@@ -8,7 +9,7 @@ import com.example.repaircalculator.databinding.MaterialsItemBinding
 
 class MaterialViewHolder(private val binding: MaterialsItemBinding) : RecyclerView.ViewHolder(
     binding.root) {
-    fun bind(material: Material, noteCallback: ((Note) -> Unit?)?) {
+    fun bind(material: Material, noteCallback: ((Material) -> AlertDialog?)?) {
 
         binding.titleTv.text = material.title
         binding.countTv.text = material.count.toString()
@@ -25,6 +26,6 @@ class MaterialViewHolder(private val binding: MaterialsItemBinding) : RecyclerVi
 //            project.status.color), PorterDuff.Mode.MULTIPLY)
 //        binding.statusTv.background.colorFilter = greyFilter
 //
-//        binding.root.setOnClickListener { noteCallback?.invoke(note) }
+        binding.root.setOnClickListener { noteCallback?.invoke(material) }
     }
 }

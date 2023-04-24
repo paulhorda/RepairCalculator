@@ -12,5 +12,6 @@ data class Project(
     @ColumnInfo(name = "date_start") val dateStart: Long,
     @ColumnInfo(name = "date_end") val dateEnd: Long,
     val status: Status,
+    val image: String,
     @ColumnInfo(name = "created_at") val createdAt: Long,
 )

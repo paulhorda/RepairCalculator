@@ -31,4 +31,16 @@ class ModalBottomSheetViewModel @Inject constructor(
             materialDao.insertMaterial(Material(0, noteId,0, title, count, price, System.currentTimeMillis()))
         }
     }
+
+    fun updateMaterial(material: Material) {
+        viewModelScope.launch {
+            materialDao.updateMaterial(material)
+        }
+    }
+
+    suspend fun getMaterial(materialId:Int): Material? {
+
+       return materialDao.getMaterialOrNull(materialId)
+
+    }
 }

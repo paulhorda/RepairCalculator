@@ -13,6 +13,9 @@ interface MaterialDao {
     @Query("SELECT * FROM Materials WHERE note_id=:noteId")
     suspend fun getMaterialsOrNull(noteId:Int): List<Material>?
 
+    @Query("SELECT * FROM Materials WHERE id=:materialId LIMIT 1")
+    suspend fun getMaterialOrNull(materialId:Int): Material?
+
 //    @Query("SELECT * FROM Materials WHERE id=:id LIMIT 1")
 //    suspend fun getMaterialById(id:Int): Note?
 

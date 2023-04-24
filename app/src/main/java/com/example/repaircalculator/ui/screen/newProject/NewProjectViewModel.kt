@@ -1,6 +1,7 @@
 package com.example.repaircalculator.ui.screen.newProject
 
 import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.repaircalculator.adapter.ProjectAdapter
@@ -35,7 +36,7 @@ class NewProjectViewModel @Inject constructor(
         }
     }
 
-    fun insertProject(name: String, address: String, dateStart: Long, dateEnd: Long) {
+    fun insertProject(name: String, address: String, dateStart: Long, dateEnd: Long, uri: Uri?) {
         viewModelScope.launch {
             projectDao.insertProject(Project(0,
                 userId,
@@ -43,6 +44,7 @@ class NewProjectViewModel @Inject constructor(
                 dateStart,
                 dateEnd,
                 Status.NOT_STARTED,
+                uri?.toString() ?: "",
                 System.currentTimeMillis()))
         }
     }

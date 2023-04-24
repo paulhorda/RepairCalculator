@@ -2,6 +2,7 @@ package com.example.repaircalculator.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.repaircalculator.data.entity.Material
 import com.example.repaircalculator.data.entity.Note
@@ -18,7 +19,7 @@ class MaterialAdapter : RecyclerView.Adapter<MaterialViewHolder>() {
             notifyDataSetChanged()
         }
 
-    var noteCallback: ((Note) -> Unit?)? = null
+    var noteCallback: ((Material) -> AlertDialog?)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MaterialViewHolder {
         val inflate = LayoutInflater.from(parent.context)

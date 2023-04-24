@@ -40,6 +40,9 @@
         <argument
             android:name="noteId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_noteFragment_self"
+            app:destination="@id/noteFragment" />
     </fragment>
     <fragment
         android:id="@+id/notesFragment"
