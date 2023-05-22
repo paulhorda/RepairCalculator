@@ -40,4 +40,7 @@
     <style name="AppTheme.PopupOverlay" parent="Theme.Material3.Light.NoActionBar"/>
 
     <style name="ToolButtonStyle" parent="Widget.AppCompat.Button.Small"/>
-</resources>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/shakespeare_light</item>
+    </style></resources>

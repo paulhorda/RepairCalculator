@@ -29,8 +29,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
     }
 }
 
@@ -65,10 +65,15 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.44"
 
 //    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    def lifecycle_version = "2.4.0"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
 
 kapt {

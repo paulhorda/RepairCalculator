@@ -2,16 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/roomsFragment"
-        android:icon="@drawable/ic_home_24"
+        android:icon="@drawable/home_fill_48"
         android:title="@string/home" />
 
     <item
         android:id="@+id/materialsFragment"
-        android:icon="@drawable/ic_bar_chart_24"
+        android:icon="@drawable/description_fill_48"
         android:title="@string/materials" />
 
     <item
         android:id="@+id/statisticsFragment"
-        android:icon="@drawable/ic_bar_chart_24"
+        android:icon="@drawable/monitoring_fill_48"
         android:title="@string/statistics" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/person_fill_48"
+        android:title="@string/profile" />
 </menu>

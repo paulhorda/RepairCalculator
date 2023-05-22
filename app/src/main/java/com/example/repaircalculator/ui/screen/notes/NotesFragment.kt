@@ -4,16 +4,19 @@ import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -61,14 +64,17 @@ class NotesFragment : Fragment() {
         setLayoutManager()
 
         val permissions =
-            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE, )
+            arrayOf(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            )
         val PERMISSION_REQUEST_CODE = 101
         requestPermissions(permissions, PERMISSION_REQUEST_CODE)
 
         viewModel.setNotes(args.roomId)
 
         viewModel.adapter.noteCallback = {
+            Log.d("jsldkfjsd", it.toString())
             val action = NotesFragmentDirections.actionNotesFragmentToNoteFragment(it.id)
             view.findNavController().navigate(action)
         }
@@ -133,6 +139,33 @@ class NotesFragment : Fragment() {
 //                        intent.putExtra("id", args.roomId)
 //                        startActivity(intent)
                     }
+                    R.id.image_watch ->{
+                        lifecycleScope.launch {
+
+                            val intent = Intent()
+                            intent.action = Intent.ACTION_VIEW
+                            val projectId = activity?.intent?.getIntExtra("KEY_PROJECT", 0) ?: 0
+
+                            context?.getExternalFilesDir("images/")
+//                            val file = File()
+//                            val photoURI = FileProvider.getUriForFile(
+//                                context!!,
+//                                context!!.applicationContext.packageName + ".provider",
+//                                file
+//                            )
+
+                            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                            intent.setDataAndType(
+                                Uri.parse(viewModel.getProject(projectId)?.image ?: ""),
+                                "image/*"
+                            )
+                            startActivity(intent)
+
+                        }
+
+                    }
+
                 }
                 return true
             }

@@ -51,6 +51,11 @@ class DatabaseModule {
     }
 
     @Provides
+    fun provideStageDao(appDatabase: AppDatabase): StageDao {
+        return appDatabase.stageDao()
+    }
+
+    @Provides
     @Singleton
     fun provideAppDatabase(@ApplicationContext appContext: Context): AppDatabase {
         return Room.databaseBuilder(

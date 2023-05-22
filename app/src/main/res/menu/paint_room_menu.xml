@@ -3,7 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/log_out"
-        android:icon="@drawable/ic_logout_24px"
+        android:icon="@drawable/baseline_image_24"
         android:title="@string/log_out"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/image_watch"
+        android:icon="@drawable/baseline_image_24"
+        android:title="@string/log_out"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
 </menu>

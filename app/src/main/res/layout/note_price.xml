@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     style="@style/Widget.Material3.BottomSheet">
 
     <com.google.android.material.bottomsheet.BottomSheetDragHandleView
@@ -25,18 +25,20 @@
         android:id="@+id/add_new_price_btn"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:letterSpacing="0.02"
-        android:text="@string/add_new_price"
+        android:text="@string/add_new_stage"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/price_list_rv"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_goneMarginBottom="12dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

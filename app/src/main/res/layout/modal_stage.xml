@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screen.newProject.NewProjectActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/transaction_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/result_materials_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/mine_shaft"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_til"
+        android:text="@string/input_dates" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/data_start_mb"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_weight="0.5"
+        android:elevation="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.02"
+        android:text="@string/date_start"
+        android:textAllCaps="false"
+        android:textColor="@color/shakespeare"
+        android:textSize="16sp"
+        app:backgroundTint="@color/catskill_white"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/data_end_mb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_materials_tv"
+        app:strokeColor="@color/catskill_white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/data_end_mb"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0.5"
+        android:elevation="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.02"
+        android:text="@string/end_date"
+        android:textAllCaps="false"
+        android:textColor="@color/shakespeare"
+        android:textSize="16sp"
+        app:backgroundTint="@color/catskill_white"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/data_start_mb"
+        app:layout_constraintTop_toBottomOf="@id/result_materials_tv"
+        app:strokeColor="@color/catskill_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

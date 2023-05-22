@@ -198,7 +198,7 @@ class NoteFragment : Fragment() {
                 .inflate(R.layout.modal_material, null, false)
 
             materialAlertDialogBuilder.setView(customAlertDialogView)
-                .setTitle("New material")
+                .setTitle("Додати товар")
                 .setPositiveButton("OK") { _: DialogInterface, _: Int ->
                     viewModelMaterial.insertMaterial(args.noteId,
                         customAlertDialogView.findViewById<TextInputLayout>(R.id.title_til).editText?.text.toString(),
@@ -209,6 +209,7 @@ class NoteFragment : Fragment() {
                     val action = NoteFragmentDirections.actionNoteFragmentSelf(args.noteId)
                     view.findNavController().navigate(action)
                 }
+                .setNegativeButton("Відміна"){_: DialogInterface, _: Int ->}
                 .show()
 
 

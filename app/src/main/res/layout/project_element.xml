@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="12dp"
     android:layout_height="wrap_content">
 
     <TextView
@@ -21,6 +22,8 @@
         android:id="@+id/date_project_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@+id/project_name_tv"
         app:layout_constraintTop_toBottomOf="@+id/project_name_tv"
         tools:text="28 April 2022 - 30 Jan 2030" />
@@ -30,8 +33,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="status"
-
-        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
         app:layout_constraintCircleRadius="20dp"
         android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="@+id/date_project_tv"

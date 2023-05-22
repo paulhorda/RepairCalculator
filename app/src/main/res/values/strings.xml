@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Repair Calculator</string>
-    <string name="date_period">%1$s - %2$s</string>
+    <string name="date_period" translatable="false">%1$s - %2$s</string>
     <string name="search_projects">Search projects</string>
     <string name="project_name">Project name</string>
 
@@ -13,7 +13,7 @@
     <string name="sing_in">Sing in</string>
     <string name="sign_up">Sing up</string>
     <string name="login">Login</string>
-    <string name="shared_preferences_key">user_id</string>
+    <string name="shared_preferences_key" translatable="false">user_id</string>
     <string name="put_field">Fill in the login and password fields</string>
     <string name="in_progress">In progress</string>
     <string name="freeze">Freeze</string>
@@ -29,12 +29,12 @@
     <string name="select_date_start">Select date start</string>
     <string name="select_date_end">Select date end</string>
     <string name="description">Description</string>
-    <string name="add_img" />
+    <string name="add_img" translatable="false" />
     <string name="add_image">Add image</string>
     <string name="take_picture">Take picture</string>
     <string name="take_picture_description">Take picture description</string>
     <string name="uah_amount_placeholder" translatable="false">%s ₴</string>
-    <string name="ok_button_title">OK</string>
+    <string name="ok_button_title" translatable="false">OK</string>
     <string name="add_text">Add text</string>
     <string name="new_note">New note</string>
     <string name="new_room">New room</string>
@@ -63,4 +63,14 @@
     <string name="width">Width</string>
     <string name="height">Height</string>
     <string name="table">Table</string>
+    <string name="click_for_details">Click for details</string>
+    <string name="statistics_by_room">Statistics by room</string>
+    <string name="statistics_by_rooms">Statistics by rooms</string>
+    <string name="show_full_table">Show full table</string>
+    <string name="add_new_stage">Add new stage</string>
+    <string name="input_dates">Input date when stage is start and end</string>
+    <string name="profile">Profile</string>
+    <string name="stages">Stages</string>
+    <string name="edit_project">Edit project</string>
+    <string name="update_status">Update status</string>
 </resources>

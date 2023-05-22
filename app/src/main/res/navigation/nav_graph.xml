@@ -31,11 +31,15 @@
         android:id="@+id/statisticsFragment"
         android:name="com.example.repaircalculator.ui.screen.statistics.StatisticsFragment"
         android:label="@string/statistics"
-        tools:layout="@layout/fragment_statistics" />
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_statisticsFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+    </fragment>
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.example.repaircalculator.ui.screen.note.NoteFragment"
-        android:label="Note"
+        android:label="@string/note"
         tools:layout="@layout/fragment_note">
         <argument
             android:name="noteId"
@@ -63,4 +67,17 @@
             android:name="projectId"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/tableFragment"
+        android:name="com.example.repaircalculator.ui.screen.tableScreen.TableFragment"
+        android:label="TableFragment" >
+        <argument
+            android:name="roomId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.repaircalculator.ui.screen.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
