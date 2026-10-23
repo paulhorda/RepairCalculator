@@ -29,4 +29,4 @@ Kotlin, Java, Android Views, Room/SQLite, Coroutines, Flow, Hilt, MVVM and MPAnd
 
 ## Portfolio context
 
-This earlier Android project provides examples of relational modeling, SQL-backed persistence and visual reporting within an application. It is not a standalone business analytics case study. The current analytics portfolio is [Retail Analytics Lab](https://github.com/paulhorda/retail-analytics-lab).
+This earlier Android project provides examples of relational modeling, SQL-backed persistence and visual reporting within an application. Current security labs are linked from the [profile](https://github.com/paulhorda).
